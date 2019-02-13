@@ -1342,6 +1342,10 @@ NASM 拥有一个强大的宏处理器，它支持条件汇编，多级文件包
  Macro to access BIOS variables by their names (from tBDA):
 
 ```nasm
+        %define BDA(x)  BDASTART + tBIOSDA. %+ x
+```
+
+```nasm
                mov     ax,BDA(COM1addr) 
                mov     bx,BDA(COM2addr)
 ```
